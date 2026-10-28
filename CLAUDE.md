@@ -57,6 +57,13 @@ Money correctness comes first; everything else is kept simple.
 - Callers of a changed method still get what they expect.
 - No reference to a class, constant or column that doesn't exist.
 
+## Git
+- Never commit on `main`. Start each task on a new branch from an up-to-date `main`.
+- Branch names: `<type>/<short-slug>`, using the commit types below (e.g. `feat/ledger-entries`, `fix/overdraft-lock`).
+- Commit messages follow Conventional Commits: `type(scope): summary`, 72 characters max.
+  Types: `feat`, `fix`, `perf`, `refactor`, `test`, `docs`, `chore`.
+- Small commits, each with green specs. Never push, merge or rebase without asking.
+
 ## What the agent gets wrong here
 - Made-up gem methods: check the code before using one.
 - `rescue => e` without re-raising.
