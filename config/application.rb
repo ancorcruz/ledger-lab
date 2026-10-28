@@ -36,6 +36,9 @@ module LedgerLab
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    # Background jobs run on Sidekiq (Redis from REDIS_URL, see config/initializers/sidekiq.rb).
+    config.active_job.queue_adapter = :sidekiq
+
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
